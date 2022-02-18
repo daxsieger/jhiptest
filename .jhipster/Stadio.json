@@ -1,0 +1,34 @@
+{
+  "applications": "*",
+  "changelogDate": "20220218175031",
+  "clientRootFolder": "jhiptest",
+  "databaseType": "sql",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "stadio",
+  "fields": [
+    {
+      "fieldName": "idStadio",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "dsStadio",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "jhiptest",
+  "name": "Stadio",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "processo",
+      "otherEntityRelationshipName": "stadio",
+      "relationshipName": "processo",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

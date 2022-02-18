@@ -1,0 +1,23 @@
+{
+  "applications": "*",
+  "changelogDate": "20220218175026",
+  "clientRootFolder": "jhiptest",
+  "databaseType": "sql",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "assistito",
+  "fields": [
+    {
+      "fieldName": "idAssistito",
+      "fieldType": "Long"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "jhiptest",
+  "name": "Assistito",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

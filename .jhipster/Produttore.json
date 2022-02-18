@@ -1,0 +1,27 @@
+{
+  "applications": "*",
+  "changelogDate": "20220218175029",
+  "clientRootFolder": "jhiptest",
+  "databaseType": "sql",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "produttore",
+  "fields": [
+    {
+      "fieldName": "idProduttore",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "dsProduttore",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "jhiptest",
+  "name": "Produttore",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

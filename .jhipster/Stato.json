@@ -1,0 +1,46 @@
+{
+  "applications": "*",
+  "changelogDate": "20220218175030",
+  "clientRootFolder": "jhiptest",
+  "databaseType": "sql",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "stato",
+  "fields": [
+    {
+      "fieldName": "idStadio",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "dsStadio",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tsCambioStato",
+      "fieldType": "Instant"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "jhiptest",
+  "name": "Stato",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "stadio",
+      "otherEntityRelationshipName": "stato",
+      "ownerSide": true,
+      "relationshipName": "stadio",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "evento",
+      "otherEntityRelationshipName": "stati",
+      "ownerSide": false,
+      "relationshipName": "eventi",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}
