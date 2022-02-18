@@ -1,0 +1,23 @@
+{
+  "applications": "*",
+  "changelogDate": "20220218175027",
+  "clientRootFolder": "jhiptest",
+  "databaseType": "sql",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "gestore",
+  "fields": [
+    {
+      "fieldName": "idGestore",
+      "fieldType": "Long"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "jhiptest",
+  "name": "Gestore",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}
