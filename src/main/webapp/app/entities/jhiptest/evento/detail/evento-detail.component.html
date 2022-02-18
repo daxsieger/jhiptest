@@ -1,0 +1,71 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="evento">
+      <h2 data-cy="eventoDetailsHeading"><span jhiTranslate="jhiptestApp.jhiptestEvento.detail.title">Evento</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ evento.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="jhiptestApp.jhiptestEvento.idEvento">Id Evento</span></dt>
+        <dd>
+          <span>{{ evento.idEvento }}</span>
+        </dd>
+        <dt><span jhiTranslate="jhiptestApp.jhiptestEvento.tsEvento">Ts Evento</span></dt>
+        <dd>
+          <span>{{ evento.tsEvento | formatMediumDatetime }}</span>
+        </dd>
+        <dt><span jhiTranslate="jhiptestApp.jhiptestEvento.note">Note</span></dt>
+        <dd>
+          <span>{{ evento.note }}</span>
+        </dd>
+        <dt><span jhiTranslate="jhiptestApp.jhiptestEvento.assistito">Assistito</span></dt>
+        <dd>
+          <div *ngIf="evento.assistito">
+            <a [routerLink]="['/assistito', evento.assistito?.id, 'view']">{{ evento.assistito?.id }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="jhiptestApp.jhiptestEvento.tipo">Tipo</span></dt>
+        <dd>
+          <div *ngIf="evento.tipo">
+            <a [routerLink]="['/tipo-evento', evento.tipo?.id, 'view']">{{ evento.tipo?.id }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="jhiptestApp.jhiptestEvento.gestore">Gestore</span></dt>
+        <dd>
+          <div *ngIf="evento.gestore">
+            <a [routerLink]="['/gestore', evento.gestore?.id, 'view']">{{ evento.gestore?.id }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="jhiptestApp.jhiptestEvento.origine">Origine</span></dt>
+        <dd>
+          <div *ngIf="evento.origine">
+            <a [routerLink]="['/produttore', evento.origine?.id, 'view']">{{ evento.origine?.id }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="jhiptestApp.jhiptestEvento.stati">Stati</span></dt>
+        <dd>
+          <span *ngFor="let stati of evento.statis; let last = last">
+            <a [routerLink]="['/stato', stati?.id, 'view']">{{ stati.id }}</a
+            >{{ last ? '' : ', ' }}
+          </span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/jhiptest/evento', evento.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>
